@@ -1,9 +1,16 @@
 #include <iostream>
-#include "athena.hpp"
-#include "core/listener.hpp"
-#include "io/logManager.hpp"
-#include "io/luaState.hpp"
 
+#ifdef _WIN32
+	#include <athena.hpp>
+	#include <listener.hpp>
+	#include <logManager.hpp>
+	#include <luaState.hpp>
+#else
+	#include <athena/athena.hpp>
+	#include <athena/listener.hpp>
+	#include <athena/logManager.hpp>
+	#include <athena/luaState.hpp>
+#endif
 
 
 bool run = true;
